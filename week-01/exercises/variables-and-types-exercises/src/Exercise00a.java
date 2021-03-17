@@ -5,5 +5,11 @@ public class Exercise00a {
         /* 2. Add a multi-line comment below.
         Hint: this instruction is a multi-line comment.
          */
+
+        //single line comment
+        /*
+        multi-lint comment
+        there is nothing to output when run
+         */
     }
 }

@@ -9,5 +9,8 @@ public class Exercise09 {
         // 1. Calculate the average of a, b, and c and store the value in a new variable.
         // 2. Print the result.
         // Expected value: 45041.03185 (give or take)
+        double sum = a + b + c;
+        double avg = sum / 3;
+        System.out.println(avg);
     }
 }

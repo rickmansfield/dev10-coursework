@@ -21,5 +21,35 @@ public class Exercise10 {
         // If a lbs/zone combo does not exist, print a warning message for the user.
 
         Scanner console = new Scanner(System.in);
+
+        System.out.println("Provide Lbs");
+        String inputLbs = console.nextLine();
+        double lbs = Double.parseDouble(inputLbs);
+
+        System.out.println("Provide Zone. i.e. 1, 2, 3");
+        String inputZone = console.nextLine();
+        double zone = Double.parseDouble(inputZone);
+
+        if (zone == 1 || zone == 2 && lbs == 1) {
+            System.out.println("Shipping is $7.50");
+        } else if (zone == 1 || zone == 2 && lbs == 2) {
+            System.out.println("Shipping is $8.25");
+        } else if (zone == 1 || zone == 2 && lbs == 3) {
+            System.out.println("Shipping is $8.70");
+        } else if (zone == 1 || zone == 2 && lbs == 4) {
+            System.out.println("Shipping is $9.20");
+        } else if (zone == 1 || zone == 2 && lbs == 5) {
+            System.out.println("Shipping is $10.20");
+        } else if (zone == 3 && lbs == 1) {
+            System.out.println("Shipping is $7.85");
+        } else if (zone == 3 && lbs == 2) {
+            System.out.println("Shipping is $8.70");
+        } else if (zone == 3 && lbs == 3) {
+            System.out.println("Shipping is $9.70");
+        } else if (zone == 3 && lbs == 4) {
+            System.out.println("Shipping is $10.55");
+        } else if (zone == 3 && lbs == 5) {
+            System.out.println("Shipping is $11.30");
+        }
     }
 }

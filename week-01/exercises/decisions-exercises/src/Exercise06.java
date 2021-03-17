@@ -20,5 +20,14 @@ public class Exercise06 {
         int shopperCount = Integer.parseInt(console.nextLine());
 
         // 1. Apply if/else here.
+        if (snorkelerCount % 2 == 0) {
+            System.out.println("everyone gets their preferred activity");
+        } else {
+            int totalGuests = (snorkelerCount + shopperCount);
+            System.out.println("Due to uneven number of snorkelers all " + totalGuests + " passengers go shopping today.");
+            snorkelerCount = 0;
+            System.out.println("Snorkelers are now equal to " + snorkelerCount);
+        }
+
     }
 }

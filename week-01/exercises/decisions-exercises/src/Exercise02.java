@@ -9,6 +9,13 @@ public class Exercise02 {
         String input = console.nextLine();
 
         int value = Integer.parseInt(input);
+        if (value % 2 == 0) {
+            String message = "your number is even";
+            System.out.println(message);
+        } else {
+            String message2 = "your numnber is odd";
+            System.out.println(message2);
+        }
 
         // 1. Add an if statement that determines if value is even.
         // 2. If it is, print a message.

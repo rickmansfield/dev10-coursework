@@ -22,7 +22,9 @@ public class Exercise13 {
         //    mer   Mercury       no (case sensitive)
         // 2. As a stretch goal, display the location (index) of needle in haystack.
         if(haystack.contains(needle)) {
-            System.out.println("yes");
+            int index = haystack.indexOf(needle);
+            System.out.println("yes " + index);
+
         } else {
             System.out.println("no");
         }

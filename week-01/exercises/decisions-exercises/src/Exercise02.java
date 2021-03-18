@@ -7,9 +7,10 @@ public class Exercise02 {
 
         System.out.print("Enter a whole number: ");
         String input = console.nextLine();
-
         int value = Integer.parseInt(input);
+        // 1. Add an if statement that determines if value is even.
         if (value % 2 == 0) {
+            // 2. If it is, print a message.
             String message = "your number is even";
             System.out.println(message);
         } else {
@@ -17,8 +18,7 @@ public class Exercise02 {
             System.out.println(message2);
         }
 
-        // 1. Add an if statement that determines if value is even.
-        // 2. If it is, print a message.
+
         // Don't worry about bad input. e.g. if the user enters "pppffghht".
     }
 }

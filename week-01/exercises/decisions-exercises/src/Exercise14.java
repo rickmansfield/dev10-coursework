@@ -22,6 +22,24 @@ public class Exercise14 {
             case 1:
                 System.out.println("I refuse to say \"a case of the Mondays\".");
                 break;
+            case 2:
+                System.out.println("Turn in up Tuesdays!");
+                break;
+            case 3:
+                System.out.println("Happy Hump Day.");
+                break;
+            case 4:
+                System.out.println("Say Thuper Thursday and laugh out loud!");
+                break;
+            case 5:
+                System.out.println("Thank Gawd It's Friday");
+                break;
+            case 6:
+                System.out.println("Singing Saturday, Saturday, Saturday like Elton John!");
+                break;
+            case 7:
+                System.out.println("The day of rest!");
+                break;
             default:
                 System.out.println("I don't recognize that day.");
                 break;

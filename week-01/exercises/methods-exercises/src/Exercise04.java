@@ -12,6 +12,7 @@ public class Exercise04 {
     // 1. Complete getFirstVowel.
     // If no vowel is found, return 0. (As a char, 0 represents the NULL value.)
     public static char getFirstVowel(String value) {
+
         return 0;
     }
 }

@@ -8,8 +8,17 @@ public class Exercise01 {
         // Call the getRandomCompliment method two more times.
         // 1. Store the result in a new string variable.
         // 2. Print the result.
-        // 3. Print the value returned directly without an intermediate variable.
+        // 3. Print a/the value returned directly without an intermediate variable.
+        String secondCompliment = getRandomCompliment();
+        System.out.println(secondCompliment);
+
+
+        String thirdCompliment = getRandomCompliment();
+        System.out.println(thirdCompliment);
+
+        System.out.println(getRandomCompliment());
     }
+
 
     public static String getRandomCompliment() {
 
@@ -34,6 +43,8 @@ public class Exercise01 {
                 return "Bravo.";
             case 9:
                 return "Really, really great.";
+            case 10:
+                return "You are smart and capable!";
         }
 
         return ""; // Should never happen.

@@ -58,7 +58,5 @@ public class Exercise17 {
             default:
                 System.out.println("Error day of week choice");
         }
-
-
     }
 }

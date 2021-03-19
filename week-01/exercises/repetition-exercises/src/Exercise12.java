@@ -10,12 +10,16 @@ public class Exercise12 {
 
         // 1. Write a loop to determine if the letter `x` occurs in a user-entered phrase.
         // 2. Print a message for both finding and not finding the `x`.
-        String letter = "x";
+        char letter = 'x';
         String result = "";
-        for (int i = 0; i < phrase.length(); i++);
-        if (letter.indexOf(phrase.charAt(i)) < 0) {
-            result += phrase.charAt(i);
+        for (int i = 0; i < phrase.length(); i++) {
+            if (phrase.charAt(i) == letter){
+                result = "X found at " + i;
+                break;
+            } else {
+                result = "No \"x\'s\" found";
+            }
         }
-
+        System.out.println(result);
     }
 }

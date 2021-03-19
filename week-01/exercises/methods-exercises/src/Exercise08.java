@@ -6,7 +6,7 @@ public class Exercise08 {
     // Output: String
     // Description: returns a random fruit name as a string.
     // See Exercise01.
-    // Choose from at least 5 fruit.
+    // Choose from at least 5 fruits.
 
     public static void main(String[] args) {
         // 2. Call your method in various ways to test it here.

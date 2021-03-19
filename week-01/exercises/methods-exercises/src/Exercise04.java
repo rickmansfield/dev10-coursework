@@ -15,16 +15,14 @@ public class Exercise04 {
 
     public static char getFirstVowel(String message) {
         String vowels = "aeiou";
-        String result = "";
+        char result = 0;
         for (int i = 0; i < message.length(); i++) {
-
-            if (vowels.indexOf(message.charAt(i)) < 0) {
-
-
-            } else if (vowels.indexOf(message.charAt(i)) == 0) {
-                return 0;
-            }
+            if (vowels.indexOf(message.charAt(i)) >= 0) {
+                result = message.charAt(i);
+                break;
+            } else
+                result = 0;
         }
-        //return 0;
+        return result;
     }
 }

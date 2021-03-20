@@ -49,6 +49,13 @@ public class App {
                 case 4: // Exit
                     //add Exit method here
                     Exit(console);
+                    String confirmExit = console.next();
+                    if (confirmExit.equals("y")) {
+                        exitApp = true;
+                        System.out.println("Goodbye!");
+                    } else {
+                        System.out.println("No worries, let's keep working!");
+                    }
                     break;
 
                 default:
@@ -69,7 +76,7 @@ public class App {
         System.out.println("2. Check  out");
         System.out.println("3. View Guests");
         System.out.println("4. Exit");
-        System.out.print("Choose an option [1-4]");
+        System.out.print("Choose an option [1-4]: ");
     }
 
     //method for guest check in
@@ -119,9 +126,10 @@ public class App {
 
             if (capsules[capsuleNumber -1] == null) {
                 System.out.println("\nError. Capsule #" + capsuleNumber + " is not occupied.");
-            } else { //what if they enter the wrong name? This version doesn't account for mismatched name.
-                capsules[capsuleNumber -1] = guestName;
+            } else {
+                capsules[capsuleNumber -1] = null;
                 System.out.println("\n" + guestName + " is successfully checked out from capsule #" + capsuleNumber);
+                //what if they enter the wrong name? This version doesn't account for mismatched name.
                 checkedOut = true;
             }
         } while (!checkedOut);
@@ -134,7 +142,14 @@ public class App {
 
     //method for exit
     private static void Exit(Scanner console){
-        System.out.println("test 4");
+        System.out.println("Exit");
+        System.out.println("<==>");
+        System.out.println("Are you Sure? \nAll data will be lost!!");
+        System.out.println("Exit [y/n]: ");
+
+        //boolean exitApp = false;
+
+
     }
 
 }

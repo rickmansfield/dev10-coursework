@@ -41,6 +41,23 @@ public class App {
         System.out.println("4. Exit");
         System.out.print("Choose an option [1-4]");
     }
+    //While Loop Here?
+    int adminChoice =
+
+
+    //method for guest check in
+    private static void CheckIn(Scanner console, String[] capsules) {
+        System.out.println("Guest Check In Menu");
+        System.out.println("<=================>");
+        System.out.print("Guest Name: ");
+        String guestName = console.next();
+     }
+
+    //method for guest check out
+    //private static void CheckOut(Scanner console, String[] capsules) {}
+
+    //method for exit
+    //private static void Exit(Scanner console){}
 
 
 

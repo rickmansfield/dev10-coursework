@@ -1,4 +1,4 @@
-import javax.sound.midi.Soundbank;
+
 import java.util.Scanner;
 
 public class App {
@@ -36,11 +36,11 @@ public class App {
         do {
             switch (adminChoice) {
                 case 1: //Check In...see method below
-                    CheckIn(console, capsules);
+                    checkIn(console, capsules);
                     break;
 
                 case 2: // Check Out
-                    CheckOut(console, capsules);
+                    checkOut(console, capsules);
                     break;
 
                 case 3: // view Guests
@@ -49,7 +49,7 @@ public class App {
 
                 case 4: // Exit
                     //add Exit method here
-                    Exit(console);
+                    exit(console);
                     String confirmExit = console.next();
                     if (confirmExit.equals("y")) {
                         exitApp = true;
@@ -81,7 +81,7 @@ public class App {
     }
 
     //method for guest check in
-    private static void CheckIn(Scanner console, String[] capsules) {
+    private static void checkIn(Scanner console, String[] capsules) {
         System.out.println("Guest Check In Menu");
         System.out.println("<=================>");
         System.out.print("Enter Guest Name: ");
@@ -109,7 +109,7 @@ public class App {
      }
 
     //method for guest check out
-    private static void CheckOut(Scanner console, String[] capsules) {
+    private static void checkOut(Scanner console, String[] capsules) {
         System.out.println("Guest Check Out Menu");
         System.out.println("<=================>");
         System.out.print("Enter Guest Name: ");
@@ -124,11 +124,15 @@ public class App {
                 System.out.println("Sorry, that is an invalid capsule, please select between Capsule numbers #[1- " + capsules.length + "]: ");
                 continue;
             }
+            if (!capsules[capsuleNumber -1].equals(guestName)) {
+                System.out.println("Whoa wrong guest. Retry with correct guest name!");
+                continue;
+            }
 
             if (capsules[capsuleNumber -1] == null) {
                 System.out.println("\nError. Capsule #" + capsuleNumber + " is not occupied.");
             } else {
-                capsules[capsuleNumber -1] = null;
+                capsules[capsuleNumber -1] = null; //resets guest name to null
                 System.out.println("\n" + guestName + " is successfully checked out from capsule #" + capsuleNumber);
                 //what if they enter the wrong name? This version doesn't account for mismatched name.
                 checkedOut = true;
@@ -169,7 +173,7 @@ public class App {
     }
 
     //method for exit
-    private static void Exit(Scanner console){
+    private static void exit(Scanner console){
         System.out.println("Exit");
         System.out.println("<==>");
         System.out.println("Are you Sure? \nAll data will be lost!!");

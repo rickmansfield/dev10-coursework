@@ -1,3 +1,4 @@
+import javax.sound.midi.Soundbank;
 import java.util.Scanner;
 
 public class App {
@@ -137,7 +138,25 @@ public class App {
 
     //method for "view"
     private static void viewCapsules(Scanner console, String[] capsules) {
-        System.out.println("test 3");
+        System.out.println("View Guests");
+        System.out.println("<=========>");
+
+        boolean viewComplete = false;
+        do {
+            System.out.print("Enter number of primary Capsule to view: ");
+            int capsuleNumber = Integer.parseInt(console.next());
+
+            if (capsuleNumber <1 || capsuleNumber > capsules.length) {
+                System.out.println("Sorry, that is an invalid capsule, please select between Capsule numbers #[1- " + capsules.length + "]: ");
+                continue;
+            }
+
+            if (capsuleNumber >= 6) {
+                System.out.println("Capsule: Guest");
+                for (int i = capsuleNumber)
+            }
+
+        } while (!viewComplete);
     }
 
     //method for exit
@@ -146,10 +165,6 @@ public class App {
         System.out.println("<==>");
         System.out.println("Are you Sure? \nAll data will be lost!!");
         System.out.println("Exit [y/n]: ");
-
-        //boolean exitApp = false;
-
-
     }
 
 }

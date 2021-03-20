@@ -152,8 +152,15 @@ public class App {
             }
 
             if (capsuleNumber >= 6 && capsuleNumber < capsules.length) {
-                for (int i = capsuleNumber -5; i< capsuleNumber +5; i++ ){
-                    System.out.printf("Capsule #%s: Guest #%s%n", i + 1, capsules[i] == null ? "[unoccupied]" : capsules[i]);
+                for (int i = capsuleNumber -6; i< capsuleNumber +5; i++ ){
+                    System.out.printf("Capsule #%s: Guest:%n", i + 1, capsules[i] == null ? "[unoccupied]" : capsules[i]);
+                    viewComplete = true;
+                }
+            }
+
+            if (capsuleNumber <6 && capsuleNumber < capsules.length) {
+                for (int i = capsuleNumber -1; i < capsuleNumber +10; i++){
+                    System.out.printf("Capsule #%s: Guest:%n", i + 1, capsules[i] == null ? "[unoccupied]" : capsules[i]);
                     viewComplete = true;
                 }
             }

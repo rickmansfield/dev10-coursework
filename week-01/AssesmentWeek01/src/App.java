@@ -9,10 +9,8 @@ public class App {
         int capsuleCount = AdminSetup(console);
         String[] capsules = new String[capsuleCount];
 
-        // step two initialize capsule hotel with user boundaries
-        createHotel(console, capsules);
-
-        int adminChoice = Integer.parseInt(console.next());
+        // step two initialize array capsule hotel with user boundaries & Collect user menu choice
+        operateHotel(console, capsules);
 
     }
 
@@ -28,14 +26,41 @@ public class App {
         return capsuleCount;
     }
 
-    //method for the initial hotel creation
-    private static void createHotel(Scanner console, String[] capsules) {
+    //method for the initial hotel creation and loop through switch statement menu choices
+    private static void operateHotel(Scanner console, String[] capsules) {
         boolean exitApp = false;
-        DisplayMenu();
+        displayMenu();
+        int adminChoice = Integer.parseInt(console.next());
+
+        switch (adminChoice) {
+            case 1: //Check In
+                //add check in method here
+                CheckIn(console, capsules);
+                break;
+
+            case 2: // Check Out
+                //add check out method here
+                System.out.println("test 2");
+                break;
+
+            case 3: //view Guests
+                //add "view" method here
+                System.out.println("test 3");
+                break;
+
+            case 4: //Exit
+                //add Exit method here
+                System.out.println("test 4");
+                break;
+
+            default:
+                System.out.println("not valid");
+
+        }
     }
 
     // method for creating/recreating the main menu to display
-    private static void DisplayMenu() {
+    private static void displayMenu() {
         System.out.println("\nGuest Menu");
         System.out.println("<==========>");
         System.out.println("1. Check In");
@@ -49,12 +74,12 @@ public class App {
     private static void CheckIn(Scanner console, String[] capsules) {
         System.out.println("Guest Check In Menu");
         System.out.println("<=================>");
-        System.out.print("Guest Name: ");
+        System.out.print("Enter Guest Name: ");
         String guestName = console.next();
 
         boolean checkedIn = false;
         do {
-            System.out.print("Capsule #[1- " + capsules.length + "]: ");
+            System.out.print("Enter Capsule #[1- " + capsules.length + "]: ");
             int capsuleNumber = Integer.parseInt(console.next());
 
             if (capsuleNumber <1 || capsuleNumber > capsules.length) {
@@ -67,7 +92,7 @@ public class App {
                 System.out.println("\n" + guestName + "successfully booked in capsule #" + capsuleNumber);
                 checkedIn = true;
             } else {
-                System.out.println("\nTry again. Capsule #" + capsuleNumber + " is occupied.");
+                System.out.println("\nError. Capsule #" + capsuleNumber + " is occupied.");
                 //checkedIn = false; //not sure if I have to reaffirm the checked in status.
             }
         } while (!checkedIn);
@@ -76,10 +101,10 @@ public class App {
     //method for guest check out
     private static void CheckOut(Scanner console, String[] capsules) {}
 
+    //method for "view"
+    //private static void View(Scanner console, String) {}
+
     //method for exit
     private static void Exit(Scanner console){}
-
-
-
 
 }

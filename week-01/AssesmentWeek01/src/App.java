@@ -151,9 +151,11 @@ public class App {
                 continue;
             }
 
-            if (capsuleNumber >= 6) {
-                System.out.println("Capsule: Guest");
-                for (int i = capsuleNumber)
+            if (capsuleNumber >= 6 && capsuleNumber < capsules.length) {
+                for (int i = capsuleNumber -5; i< capsuleNumber +5; i++ ){
+                    System.out.printf("Capsule #%s: Guest #%s%n", i + 1, capsules[i] == null ? "[unoccupied]" : capsules[i]);
+                    viewComplete = true;
+                }
             }
 
         } while (!viewComplete);

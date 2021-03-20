@@ -30,8 +30,8 @@ public class App {
     //method for the initial hotel creation and loop through switch statement menu choices
     private static void operateHotel(Scanner console, String[] capsules) {
         boolean exitApp = false;
-            displayMenu();
-            int adminChoice = Integer.parseInt(console.next());
+        displayMenu();
+        int adminChoice = Integer.parseInt(console.next());
 
         do {
             switch (adminChoice) {
@@ -48,8 +48,10 @@ public class App {
                     break;
 
                 case 4: // Exit
-                    //add Exit method here
-                    exit(console);
+                    System.out.println("Exit");
+                    System.out.println("<==>");
+                    System.out.println("Are you Sure? \nAll data will be lost!!");
+                    System.out.println("Exit [y/n]: ");
                     String confirmExit = console.next();
                     if (confirmExit.equals("y")) {
                         exitApp = true;
@@ -92,21 +94,20 @@ public class App {
             System.out.print("Enter Capsule #[1- " + capsules.length + "]: ");
             int capsuleNumber = Integer.parseInt(console.next());
 
-            if (capsuleNumber <1 || capsuleNumber > capsules.length) {
+            if (capsuleNumber < 1 || capsuleNumber > capsules.length) {
                 System.out.println("Sorry, that is an invalid capsule, please select between Capsule numbers #[1- " + capsules.length + "]: ");
                 continue;
             }
 
-            if (capsules[capsuleNumber -1] == null) {
-                capsules[capsuleNumber -1] = guestName;
+            if (capsules[capsuleNumber - 1] == null) {
+                capsules[capsuleNumber - 1] = guestName;
                 System.out.println("\n" + guestName + " is successfully booked in capsule #" + capsuleNumber);
                 checkedIn = true;
             } else {
                 System.out.println("\nError. Capsule #" + capsuleNumber + " is occupied.");
-                //checkedIn = false; //not sure if I have to reaffirm the checked in status.
             }
         } while (!checkedIn);
-     }
+    }
 
     //method for guest check out
     private static void checkOut(Scanner console, String[] capsules) {
@@ -120,19 +121,19 @@ public class App {
             System.out.print("Enter Capsule #[1- " + capsules.length + "]: ");
             int capsuleNumber = Integer.parseInt(console.next());
 
-            if (capsuleNumber <1 || capsuleNumber > capsules.length) {
+            if (capsuleNumber < 1 || capsuleNumber > capsules.length) {
                 System.out.println("Sorry, that is an invalid capsule, please select between Capsule numbers #[1- " + capsules.length + "]: ");
                 continue;
             }
-            if (!capsules[capsuleNumber -1].equals(guestName)) {
+            if (!capsules[capsuleNumber - 1].equals(guestName)) {
                 System.out.println("Whoa wrong guest. Retry with correct guest name!");
                 continue;
             }
 
-            if (capsules[capsuleNumber -1] == null) {
+            if (capsules[capsuleNumber - 1] == null) {
                 System.out.println("\nError. Capsule #" + capsuleNumber + " is not occupied.");
             } else {
-                capsules[capsuleNumber -1] = null; //resets guest name to null
+                capsules[capsuleNumber - 1] = null; //resets guest name to null
                 System.out.println("\n" + guestName + " is successfully checked out from capsule #" + capsuleNumber);
                 //what if they enter the wrong name? This version doesn't account for mismatched name.
                 checkedOut = true;
@@ -150,20 +151,20 @@ public class App {
             System.out.print("Enter number of primary Capsule to view: ");
             int capsuleNumber = Integer.parseInt(console.next());
 
-            if (capsuleNumber <1 || capsuleNumber > capsules.length) {
+            if (capsuleNumber < 1 || capsuleNumber > capsules.length) {
                 System.out.println("Sorry, that is an invalid capsule, please select between Capsule numbers #[1- " + capsules.length + "]: ");
                 continue;
             }
 
             if (capsuleNumber >= 6 && capsuleNumber < capsules.length) {
-                for (int i = capsuleNumber - 6; i< capsuleNumber + 5; i++ ){
+                for (int i = capsuleNumber - 6; i < capsuleNumber + 5; i++) {
                     System.out.printf("Capsule #%s: Guest: %s%n", i + 1, capsules[i] == null ? "[unoccupied]" : capsules[i]);
                     viewComplete = true;
                 }
             }
 
-            if (capsuleNumber <6 && capsuleNumber < capsules.length) {
-                for (int i = capsuleNumber -1; i < capsuleNumber +10; i++){
+            if (capsuleNumber < 6 && capsuleNumber < capsules.length) {
+                for (int i = capsuleNumber - 1; i < capsuleNumber + 10; i++) {
                     System.out.printf("Capsule #%s: Guest: %s%n", i + 1, capsules[i] == null ? "[unoccupied]" : capsules[i]);
                     viewComplete = true;
                 }
@@ -171,13 +172,4 @@ public class App {
 
         } while (!viewComplete);
     }
-
-    //method for exit
-    private static void exit(Scanner console){
-        System.out.println("Exit");
-        System.out.println("<==>");
-        System.out.println("Are you Sure? \nAll data will be lost!!");
-        System.out.println("Exit [y/n]: ");
-    }
-
 }

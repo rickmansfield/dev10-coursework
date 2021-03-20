@@ -112,11 +112,11 @@ public class App {
     private static void checkOut(Scanner console, String[] capsules) {
         System.out.println("Guest Check Out Menu");
         System.out.println("<=================>");
-        System.out.print("Enter Guest Name: ");
-        String guestName = console.next();
 
         boolean checkedOut = false;
         do {
+            System.out.print("Enter Guest Name: ");
+            String guestName = console.next();
             System.out.print("Enter Capsule #[1- " + capsules.length + "]: ");
             int capsuleNumber = Integer.parseInt(console.next());
 

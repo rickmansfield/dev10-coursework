@@ -29,34 +29,36 @@ public class App {
     //method for the initial hotel creation and loop through switch statement menu choices
     private static void operateHotel(Scanner console, String[] capsules) {
         boolean exitApp = false;
-        displayMenu();
-        int adminChoice = Integer.parseInt(console.next());
+            displayMenu();
+            int adminChoice = Integer.parseInt(console.next());
 
-        switch (adminChoice) {
-            case 1: //Check In
-                //add check in method here
-                CheckIn(console, capsules);
-                break;
+        do {
+            switch (adminChoice) {
+                case 1: //Check In...see method below
+                    CheckIn(console, capsules);
+                    break;
 
-            case 2: // Check Out
-                //add check out method here
-                System.out.println("test 2");
-                break;
+                case 2: // Check Out
+                    CheckOut(console, capsules);
+                    break;
 
-            case 3: //view Guests
-                //add "view" method here
-                System.out.println("test 3");
-                break;
+                case 3: // view Guests
+                    viewCapsules(console, capsules);
+                    break;
 
-            case 4: //Exit
-                //add Exit method here
-                System.out.println("test 4");
-                break;
+                case 4: // Exit
+                    //add Exit method here
+                    Exit(console);
+                    break;
 
-            default:
-                System.out.println("not valid");
-
-        }
+                default:
+                    System.out.println("not valid, try again: ");
+            }
+            if (!exitApp) {
+                displayMenu();
+                adminChoice = Integer.parseInt(console.next());
+            }
+        } while (!exitApp);
     }
 
     // method for creating/recreating the main menu to display
@@ -89,7 +91,7 @@ public class App {
 
             if (capsules[capsuleNumber -1] == null) {
                 capsules[capsuleNumber -1] = guestName;
-                System.out.println("\n" + guestName + "successfully booked in capsule #" + capsuleNumber);
+                System.out.println("\n" + guestName + " is successfully booked in capsule #" + capsuleNumber);
                 checkedIn = true;
             } else {
                 System.out.println("\nError. Capsule #" + capsuleNumber + " is occupied.");
@@ -99,12 +101,40 @@ public class App {
      }
 
     //method for guest check out
-    private static void CheckOut(Scanner console, String[] capsules) {}
+    private static void CheckOut(Scanner console, String[] capsules) {
+        System.out.println("Guest Check Out Menu");
+        System.out.println("<=================>");
+        System.out.print("Enter Guest Name: ");
+        String guestName = console.next();
+
+        boolean checkedOut = false;
+        do {
+            System.out.print("Enter Capsule #[1- " + capsules.length + "]: ");
+            int capsuleNumber = Integer.parseInt(console.next());
+
+            if (capsuleNumber <1 || capsuleNumber > capsules.length) {
+                System.out.println("Sorry, that is an invalid capsule, please select between Capsule numbers #[1- " + capsules.length + "]: ");
+                continue;
+            }
+
+            if (capsules[capsuleNumber -1] == null) {
+                System.out.println("\nError. Capsule #" + capsuleNumber + " is not occupied.");
+            } else { //what if they enter the wrong name? This version doesn't account for mismatched name.
+                capsules[capsuleNumber -1] = guestName;
+                System.out.println("\n" + guestName + " is successfully checked out from capsule #" + capsuleNumber);
+                checkedOut = true;
+            }
+        } while (!checkedOut);
+    }
 
     //method for "view"
-    //private static void View(Scanner console, String) {}
+    private static void viewCapsules(Scanner console, String[] capsules) {
+        System.out.println("test 3");
+    }
 
     //method for exit
-    private static void Exit(Scanner console){}
+    private static void Exit(Scanner console){
+        System.out.println("test 4");
+    }
 
 }

@@ -156,7 +156,7 @@ public class App {
                 continue;
             }
 
-            if (capsuleNumber >= 6 && capsuleNumber < capsules.length) {
+            if (capsuleNumber >= 6 && capsuleNumber < (capsules.length -4)) {
                 for (int i = capsuleNumber - 6; i < capsuleNumber + 5; i++) {
                     System.out.printf("Capsule #%s: Guest: %s%n", i + 1, capsules[i] == null ? "[unoccupied]" : capsules[i]);
                     viewComplete = true;

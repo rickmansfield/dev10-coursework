@@ -8,10 +8,13 @@ public class App {
 
         // step one display Welcome and prompt for capsules
         int capsuleCount = AdminSetup(console);
-        String[] capsules = new String[capsuleCount];
 
         // step two initialize array capsule hotel with user boundaries & Collect user menu choice
+        String[] capsules = new String[capsuleCount];
+
+        // step thee call method for user menu choices do/while loop and switch
         operateHotel(console, capsules);
+        // create other methods and call them (inside this method) as needed to perform each menu item
 
     }
 

@@ -151,26 +151,38 @@ public class App {
             System.out.print("Enter number of primary Capsule to view: ");
             int capsuleNumber = Integer.parseInt(console.next());
 
+            //Warning to prevent user from selecting out of bounds options
             if (capsuleNumber < 1 || capsuleNumber > capsules.length) {
                 System.out.println("Sorry, that is an invalid capsule, please select between Capsule numbers #[1- " + capsules.length + "]: ");
                 continue;
             }
+            // for Hotels with less than 12 units (i.e. can't view/print five above and below totalling eleven capsules.
+            if (capsules.length <= 11) {
+                System.out.println("TEST TEST TEST TEST");
+                System.out.println("Here are the viewable capsules");
+                for (int i = 0; i < capsules.length; i++) {
+                    System.out.printf("Capsule #%s: Guest: %s%n", i + 1, capsules[i] == null ? "[unoccupied]" : capsules[i]);
+                    viewComplete = true;}
+            } else if (capsuleNumber < 6) {
+                System.out.println("TEST ME TEST ME");
+                System.out.println("Here are all the viewable capsules");
+                for (int i = capsuleNumber - 1; i < capsuleNumber + 10; i++) {
+                    System.out.printf("Capsule #%s: Guest: %s%n", i + 1, capsules[i] == null ? "[unoccupied]" : capsules[i]);
+                    viewComplete = true;}
+            }
 
+            // for viewing five capsules above/below (total 11) when possible
             if (capsuleNumber >= 6 && capsuleNumber < (capsules.length -4)) {
+                System.out.println("Here are the eleven closest capsules");
                 for (int i = capsuleNumber - 6; i < capsuleNumber + 5; i++) {
                     System.out.printf("Capsule #%s: Guest: %s%n", i + 1, capsules[i] == null ? "[unoccupied]" : capsules[i]);
                     viewComplete = true;
                 }
             }
 
-            if (capsuleNumber < 6 && capsuleNumber < capsules.length) {
-                for (int i = capsuleNumber - 1; i < capsuleNumber + 10; i++) {
-                    System.out.printf("Capsule #%s: Guest: %s%n", i + 1, capsules[i] == null ? "[unoccupied]" : capsules[i]);
-                    viewComplete = true;
-                }
-            }
-
+            // for viewing eleven capsules starting eleven away from the right upper bounds (Alternative to five above/below)
             if (capsuleNumber > 6 && capsuleNumber >= (capsules.length - 4)) {
+                System.out.println("Here are the eleven closest capsules");
                 for (int i = (capsuleNumber - (11 - (capsules.length - capsuleNumber))); i < capsules.length; i++) {
                     System.out.printf("Capsule #%s: Guest: %s%n", i + 1, capsules[i] == null ? "[unoccupied]" : capsules[i]);
                     viewComplete = true;

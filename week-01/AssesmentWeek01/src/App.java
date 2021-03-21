@@ -170,6 +170,13 @@ public class App {
                 }
             }
 
+            if (capsuleNumber > 6 && capsuleNumber >= (capsules.length - 4)) {
+                for (int i = (capsuleNumber - (11 - (capsules.length - capsuleNumber))); i < capsules.length; i++) {
+                    System.out.printf("Capsule #%s: Guest: %s%n", i + 1, capsules[i] == null ? "[unoccupied]" : capsules[i]);
+                    viewComplete = true;
+                }
+            }
+
         } while (!viewComplete);
     }
 }

@@ -158,13 +158,11 @@ public class App {
             }
             // for Hotels with less than 12 units (i.e. can't view/print five above and below totalling eleven capsules.
             if (capsules.length <= 11) {
-                System.out.println("TEST TEST TEST TEST");
                 System.out.println("Here are the viewable capsules");
                 for (int i = 0; i < capsules.length; i++) {
                     System.out.printf("Capsule #%s: Guest: %s%n", i + 1, capsules[i] == null ? "[unoccupied]" : capsules[i]);
                     viewComplete = true;}
             } else if (capsuleNumber < 6) {
-                System.out.println("TEST ME TEST ME");
                 System.out.println("Here are all the viewable capsules");
                 for (int i = capsuleNumber - 1; i < capsuleNumber + 10; i++) {
                     System.out.printf("Capsule #%s: Guest: %s%n", i + 1, capsules[i] == null ? "[unoccupied]" : capsules[i]);

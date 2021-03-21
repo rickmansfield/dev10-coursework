@@ -9,7 +9,7 @@ public class App {
         // step one display Welcome and prompt for capsules
         int capsuleCount = AdminSetup(console);
 
-        // step two initialize array capsule hotel with user boundaries & Collect user menu choice
+        // step two initialize array capsule hotel with user boundaries
         String[] capsules = new String[capsuleCount];
 
         // step thee call method for user menu choices do/while loop and switch

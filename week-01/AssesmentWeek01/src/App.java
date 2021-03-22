@@ -138,7 +138,6 @@ public class App {
             } else {
                 capsules[capsuleNumber - 1] = null; //resets guest name to null
                 System.out.println("\n" + guestName + " is successfully checked out from capsule #" + capsuleNumber);
-                //what if they enter the wrong name? This version doesn't account for mismatched name.
                 checkedOut = true;
             }
         } while (!checkedOut);

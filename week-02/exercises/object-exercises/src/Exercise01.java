@@ -9,6 +9,11 @@ public class Exercise01 {
         // 2. Read its constructor comments.
         // 3. Instantiate two more musicians and assign them to new variables.
         // 4. Print the musicians' names to the console.
+        Musician sinatra = new Musician("Fran Sinatra", 10);
+        System.out.println(sinatra.getName());
+
+        Musician billie = new Musician("Billie Holiday", 10);
+        System.out.println(billie.getName());
 
     }
 }

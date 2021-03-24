@@ -14,10 +14,10 @@ public class Exercise17 {
         int columns = Integer.parseInt(console.nextLine());
 
         System.out.println("Enter box character");
-        String boxCharacter = console.next();
+        String box = console.next();
 
         System.out.println("Enter boarder character");
-        String boarderCharacter = console.next();
+        String boarder = console.next();
 
         // 2. Use nested loops to print a user-defined box in the console.
         // (See Exercise16.)
@@ -28,15 +28,14 @@ public class Exercise17 {
         int j;
 
         for (i = 1; i <= rows; i++) {
-            //System.out.print("*");
+
             //this inner loop runs its course (completely) for EACH TIME the outer loop runs.
             for (j = 1; j <= columns; j++) {
                 if (j == 1 || j == columns || i == 1 || i == rows) {
-                    System.out.print("*");
+                    System.out.print(boarder);
                 } else
-                    System.out.print("#");
+                    System.out.print(box);
             }
-            //System.out.print("*");
             System.out.println();
         }
 

@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 public class App {
@@ -24,7 +23,7 @@ public class App {
         System.out.println("<===============================>");
         System.out.print("Please enter the capsules in your hotel: ");
 
-        int capsuleCount = Integer.parseInt(console.next());
+        int capsuleCount = Integer.parseInt(console.nextLine());
 
         System.out.println("Excellent, you have " + capsuleCount + " available capsules for occupancy.");
         return capsuleCount;
@@ -34,7 +33,7 @@ public class App {
     private static void operateHotel(Scanner console, String[] capsules) {
         boolean exitApp = false;
         displayMenu();
-        int adminChoice = Integer.parseInt(console.next());
+        int adminChoice = Integer.parseInt(console.nextLine());
 
         do {
             switch (adminChoice) {
@@ -55,7 +54,7 @@ public class App {
                     System.out.println("<==>");
                     System.out.println("Are you Sure? \nAll data will be lost!!");
                     System.out.println("Exit [y/n]: ");
-                    String confirmExit = console.next();
+                    String confirmExit = console.nextLine();
                     if (confirmExit.equals("y")) {
                         exitApp = true;
                         System.out.println("Goodbye!");
@@ -69,7 +68,7 @@ public class App {
             }
             if (!exitApp) {
                 displayMenu();
-                adminChoice = Integer.parseInt(console.next());
+                adminChoice = Integer.parseInt(console.nextLine());
             }
         } while (!exitApp);
     }
@@ -90,12 +89,12 @@ public class App {
         System.out.println("Guest Check In Menu");
         System.out.println("<=================>");
         System.out.print("Enter Guest Name: ");
-        String guestName = console.next();
+        String guestName = console.nextLine();
 
         boolean checkedIn = false;
         do {
             System.out.print("Enter Capsule #[1- " + capsules.length + "]: ");
-            int capsuleNumber = Integer.parseInt(console.next());
+            int capsuleNumber = Integer.parseInt(console.nextLine());
 
             if (capsuleNumber < 1 || capsuleNumber > capsules.length) {
                 System.out.println("Sorry, that is an invalid capsule, please select between Capsule numbers #[1- " + capsules.length + "]: ");
@@ -120,9 +119,9 @@ public class App {
         boolean checkedOut = false;
         do {
             System.out.print("Enter Guest Name: ");
-            String guestName = console.next();
+            String guestName = console.nextLine();
             System.out.print("Enter Capsule #[1- " + capsules.length + "]: ");
-            int capsuleNumber = Integer.parseInt(console.next());
+            int capsuleNumber = Integer.parseInt(console.nextLine());
 
             if (capsuleNumber < 1 || capsuleNumber > capsules.length) {
                 System.out.println("Sorry, that is an invalid capsule, please select between Capsule numbers #[1- " + capsules.length + "]: ");
@@ -138,6 +137,7 @@ public class App {
             } else {
                 capsules[capsuleNumber - 1] = null; //resets guest name to null
                 System.out.println("\n" + guestName + " is successfully checked out from capsule #" + capsuleNumber);
+                //what if they enter the wrong name? This version doesn't account for mismatched name.
                 checkedOut = true;
             }
         } while (!checkedOut);
@@ -151,7 +151,7 @@ public class App {
         boolean viewComplete = false;
         do {
             System.out.print("Enter number of primary Capsule to view: ");
-            int capsuleNumber = Integer.parseInt(console.next());
+            int capsuleNumber = Integer.parseInt(console.nextLine());
 
             //Warning to prevent user from selecting out of bounds options
             if (capsuleNumber < 1 || capsuleNumber > capsules.length) {

@@ -22,5 +22,23 @@ public class Exercise16 {
         // (2X2)
         // **
         // **
+
+        int rows = 6;
+        int columns = 4;
+        int i;
+        int j;
+
+        for (i = 1; i <= rows; i++) {
+            //System.out.print("*");
+            //this inner loop runs its course (completely) for EACH TIME the outer loop runs.
+            for (j = 1; j <= columns; j++) {
+                if (j == 1 || j == columns || i == 1 || i == rows) {
+                    System.out.print("*");
+                } else
+                    System.out.print("#");
+            }
+            //System.out.print("*");
+            System.out.println();
+        }
     }
 }

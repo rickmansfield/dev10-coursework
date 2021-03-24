@@ -4,6 +4,12 @@ public class Exercise15 {
         // BOX
         // 1. Use nested loops to print a box in the console.
         // One loop should represent rows and the other should represent columns.
+        String box = "#";
+
+        for (int i = 0; i < box.length(); i++) {
+            System.out.println();
+
+        }
         // 2. Change the row and column limit to change the shape of the box.
 
         // Expected Output (5X5)

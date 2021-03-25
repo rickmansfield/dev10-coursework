@@ -27,4 +27,5 @@ public interface MoneyStorage {
      * May not be the full parameter amount if rules doesn't allow it.
      */
     double withdraw(double amount);
+
 }

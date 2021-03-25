@@ -1,7 +1,7 @@
 public class Exercise04 {
 
     public static void main(String[] args) {
-        // 1. Replace `null` with a new Vault. Initialize its balance to zero.
+        // 1. Replace `null` with a new MoneyStorage.Vault. Initialize its balance to zero.
         MoneyStorage storage = null;
 
         // 2. Run Exercise04.

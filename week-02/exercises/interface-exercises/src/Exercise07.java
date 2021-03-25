@@ -34,7 +34,7 @@
 //        System.out.println("Choose a place to store your money:");
 //        System.out.println("1. Wallet");
 //        System.out.println("2. Mortgage");
-//        System.out.println("3. Vault");
+//        System.out.println("3. MoneyStorage.Vault");
 //        System.out.println("4. Bank Account");
 //
 //        String input;
@@ -57,14 +57,14 @@
 //
 //
 //        // 2. For each option, create a method that returns a MoneyStorage of the appropriate type:
-//        // 1 == Wallet, 2 == Mortgage, 3 == Vault, 4 == Bank Account
+//        // 1 == Wallet, 2 == Mortgage, 3 == MoneyStorage.Vault, 4 == Bank Account
 //        // Prompt the user for data. Data should be specific to the type:
 //        // - a starting balance
 //        // - description for a Wallet
 //        // - accountNumber for Mortgage and BankAccount
-//        // - for Vault?
+//        // - for MoneyStorage.Vault?
 //
-//        // 3. Return the Wallet, Mortgage, Vault, or Bank Account instead of null.
+//        // 3. Return the Wallet, Mortgage, MoneyStorage.Vault, or Bank Account instead of null.
 //        return null;
 //    }
 //    static MoneyStorage createWallet (MoneyStorage storage) {

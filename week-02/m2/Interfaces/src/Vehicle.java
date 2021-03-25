@@ -7,7 +7,9 @@ public interface Vehicle {
     // describing the velocity.
     String getVelocityMessage();
 }
-/*
+
+
+/* personal notes
 Differences between a class declaration and an interface declaration:
 
 -Uses the keyword interface instead of class.

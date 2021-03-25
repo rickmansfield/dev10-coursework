@@ -12,7 +12,7 @@ public class Exercise04 {
         // them out until the user types "end".
         boolean end = false;
         do {
-            System.out.print("Add another musician: \"y\" \ntype \"end\" to quit [y/n]:");
+            System.out.print("Add another musician?\n\"y\" to continue no to quit \"n\" [y/n]:");
             String response = console.nextLine();
 
             if (response.equals("y")) {
@@ -26,7 +26,7 @@ public class Exercise04 {
                 System.out.printf("%s: %s%n", m.getName(), m.getRating());
 
             }
-            if (response.equals("end")) {
+            if (response.equals("n")) {
                 System.out.println("Quit");
                 System.out.println("<==>");
                 System.out.println("Are you Sure? \nAll data will be lost!!");

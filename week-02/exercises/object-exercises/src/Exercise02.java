@@ -13,11 +13,13 @@ public class Exercise02 {
         // 3. Instantiate two musicians and assign them to new variables.
         Musician sinatra = new Musician("Fran Sinatra", 10);
         Musician billie = new Musician("Billie Holiday", 10);
+        Musician bob = new Musician("Bob Marley", 10);
 
         // 4. Print each musicians' name and rating on a single line.
         String format = "name: %s, rating: %s%n";
         System.out.printf(format, ocean.getName(), ocean.getRating());
         System.out.printf(format, sinatra.getName(), sinatra.getRating());
         System.out.printf(format, billie.getName(), billie.getRating());
+        System.out.printf(format, bob.getName(), bob.getRating());
     }
 }

@@ -13,7 +13,10 @@ public class Exercise08 {
         // 3. Fix any errors by editing the Balloon class.
         // 4. Confirm the output is similar to Sample Output
 
+
         Balloon b = new Balloon("green", 9);
+
+
         for (int i = 0; i < 10; i++) {
             b.inflate();
             System.out.println("psi:" + b.getPsi());

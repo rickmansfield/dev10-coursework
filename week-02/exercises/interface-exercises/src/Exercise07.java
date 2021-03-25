@@ -44,6 +44,18 @@ public class Exercise07 {
         } while (!(input.length() == 1 && input.charAt(0) >= '1' && input.charAt(0) <= '4'));
 
         // 1. Add a switch statement to handle options 1 - 4.
+        switch (input) {
+            case "1":
+                return createWallet();
+            case "2":
+                break;
+            case "3":
+                break;
+            case "4":
+                break;
+        }
+
+
         // 2. For each option, create a method that returns a MoneyStorage of the appropriate type:
         // 1 == Wallet, 2 == Mortgage, 3 == Vault, 4 == Bank Account
         // Prompt the user for data. Data should be specific to the type:
@@ -54,6 +66,15 @@ public class Exercise07 {
 
         // 3. Return the Wallet, Mortgage, Vault, or Bank Account instead of null.
         return null;
+    }
+    static MoneyStorage createWallet (MoneyStorage storage) {
+        System.out.println("Please enter a starting balance");
+        String balanceInput = console.nextLine();
+        Double startingBalance = Double.parseDouble(balanceInput);
+
+        System.out.println("Please enter a description of the wallet:");
+        String description = console.nextLine();
+        Wallet wallet = new Wallet(startingBalance, description);
     }
 
     static void print(MoneyStorage storage) {

@@ -11,6 +11,7 @@ public class Balloon {
     }
 
     //Getters & Setters
+
     public String getColor() {
         return color;
     }
@@ -19,18 +20,23 @@ public class Balloon {
         return psi;
     }
 
+
+
     //Methods
-    public void inflate() {
+    public void inflate(){
         this.psi = this.psi + Math.random() * 5.0;
     }
 
-    public boolean isExploded() {
+    public boolean isExploded(){
+
         if (psi > 16.0) {
             return true;
             //return Double.POSITIVE_INFINITY;
         } else {
             return false;
             //return this.psi;}
+
         }
+
     }
 }

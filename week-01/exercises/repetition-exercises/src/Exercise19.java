@@ -24,6 +24,6 @@ public class Exercise19 {
         // "B", "igstar" -> "Bigstar"
         // "", "huh?" -> "huh?"
         // "wha?", "" -> "wha?"
-        for (int i = 0; i <)
+
     }
 }

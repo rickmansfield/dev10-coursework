@@ -7,10 +7,30 @@ public class Balloon {
     //CONSTRUCTORS
     public Balloon(String color, double psi) {
         this.color = color;
-        //this.psi = psi;
+        this.psi = psi;
     }
 
     //Getters & Setters
-    public String getColor() {return color;}
-    public double getPsi() {return 0.0;}
+    public String getColor() {
+        return color;
+    }
+
+    public double getPsi() {
+        return psi;
+    }
+
+    //Methods
+    public void inflate() {
+        this.psi = this.psi + Math.random() * 5.0;
+    }
+
+    public boolean isExploded() {
+        if (psi > 16.0) {
+            return true;
+            //return Double.POSITIVE_INFINITY;
+        } else {
+            return false;
+            //return this.psi;}
+        }
+    }
 }

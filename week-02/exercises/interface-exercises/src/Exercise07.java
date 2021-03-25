@@ -34,7 +34,7 @@ public class Exercise07 {
         System.out.println("Choose a place to store your money:");
         System.out.println("1. Wallet");
         System.out.println("2. Mortgage");
-        System.out.println("3. MoneyStorage.Vault");
+        System.out.println("3. Vault");
         System.out.println("4. Bank Account");
 
         String input;
@@ -48,11 +48,13 @@ public class Exercise07 {
             case "1":
                 return createWallet();
             case "2":
-                break;
+                return createMortgage();
             case "3":
-                break;
+                return createVault();
             case "4":
-                break;
+                return createBankAccount();
+            default:
+                return null;
         }
 
 
@@ -62,12 +64,14 @@ public class Exercise07 {
         // - a starting balance
         // - description for a Wallet
         // - accountNumber for Mortgage and BankAccount
-        // - for MoneyStorage.Vault?
+        // - for Vault?
 
         // 3. Return the Wallet, Mortgage, MoneyStorage.Vault, or Bank Account instead of null.
-        return null;
+
     }
-    static MoneyStorage createWallet (MoneyStorage storage) {
+
+
+    static MoneyStorage createWallet() {
         System.out.println("Please enter a starting balance");
         String balanceInput = console.nextLine();
         Double startingBalance = Double.parseDouble(balanceInput);
@@ -75,6 +79,44 @@ public class Exercise07 {
         System.out.println("Please enter a description of the wallet:");
         String description = console.nextLine();
         Wallet wallet = new Wallet(startingBalance, description);
+
+        return wallet;
+    }
+
+    static MoneyStorage createMortgage() {
+        System.out.println("Please enter a starting balance");
+        String balanceInput = console.nextLine();
+        Double startingBalance = Double.parseDouble(balanceInput);
+
+        System.out.println("Please enter a Account No of the Mortgage:");
+        String accountNumber = console.nextLine();
+        Mortgage mortgage = new Mortgage(startingBalance, accountNumber);
+
+        return mortgage;
+    }
+    private static MoneyStorage createVault() {
+        System.out.println("Please enter a starting balance");
+        String balanceInput = console.nextLine();
+        Double startingBalance = Double.parseDouble(balanceInput);
+
+        System.out.println("Please enter a description of the Vault:");
+        String description = console.nextLine();
+        Vault vault = new Vault(startingBalance, description);
+
+        return vault;
+    }
+
+    private static MoneyStorage createBankAccount() {
+        System.out.println("Please enter a starting balance");
+        String balanceInput = console.nextLine();
+        Double startingBalance = Double.parseDouble(balanceInput);
+
+        System.out.println("Please enter an account number:");
+        String accountNumber = console.nextLine();
+        BankAccount bankAccount = new BankAccount(startingBalance, accountNumber);
+
+        return bankAccount;
+
     }
 
     static void print(MoneyStorage storage) {

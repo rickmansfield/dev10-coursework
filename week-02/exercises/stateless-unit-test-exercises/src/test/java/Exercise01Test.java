@@ -23,4 +23,24 @@ class Exercise01Test {
         assertEquals(-200, Exercise01.subtract(50, 250));
         assertEquals(13, Exercise01.subtract(40, 27));
     }
+
+    @Test
+    void multiply() {
+        assertEquals(100, Exercise01.multiply(10, 10));
+        assertEquals(50, Exercise01.multiply(10, 5));
+        assertEquals(-15, Exercise01.multiply(-1, 15));
+        assertEquals(100000, Exercise01.multiply(100000, 1));
+        assertEquals(-200, Exercise01.multiply(-50, 4));
+        assertEquals(13, Exercise01.multiply(13, 1));
+    }
+
+    @Test
+    void divide() {
+        assertEquals(1, Exercise01.divide(10, 10));
+        assertEquals(2, Exercise01.divide(10, 5));
+        assertEquals(1, Exercise01.divide(-1, -1));
+        assertEquals(100000, Exercise01.divide(100000, 1));
+        assertEquals(-25, Exercise01.divide(-50, 2));
+        assertEquals(13, Exercise01.divide(13, 1));
+    }
 }

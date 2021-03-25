@@ -9,7 +9,7 @@ public class Mortgage implements MoneyStorage {
     private String accountNumber;
 
     public Mortgage(double startingBalance, String accountNumber) {
-        this.balance = -startingBalance;
+        this.balance = startingBalance;
         this.accountNumber = accountNumber;
     }
 

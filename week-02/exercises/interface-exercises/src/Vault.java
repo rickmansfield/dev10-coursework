@@ -12,7 +12,7 @@ public class Vault implements MoneyStorage {
 
     @Override
     public double getBalance() {
-        return 0;
+        return balance;
     }
 
     @Override

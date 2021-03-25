@@ -8,5 +8,8 @@ public class Exercise17 {
 
         String adjective = "happy";
         String noun = "moon";
+        String phrase = "I love my wife. She is " + adjective + " when she is under the " + noun + ".";
+        System.out.println(phrase);
     }
+
 }

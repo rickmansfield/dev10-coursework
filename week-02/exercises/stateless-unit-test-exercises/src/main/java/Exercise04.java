@@ -23,7 +23,7 @@ public class Exercise04 {
      * @return the total cost with volume discounts applied
      */
     public double calculateTotalCost(double price, int quantity) {
-        int discountCase = 0;
+        int switchCase = 0;
         if (quantity >= 1 && quantity <= 15) {
             switchCase = 1;
         }
@@ -36,23 +36,28 @@ public class Exercise04 {
         if (quantity >= 51 && quantity <= 74) {
             switchCase = 4;
         }
-        if (quantity >= 76) {
+        if (quantity >= 75) {
             switchCase = 5;
         }
-        switch (discountCase) {
+        double cost = 0;
+        switch (switchCase) {
             case 1:
                 cost = price * quantity;
+                break;
             case 2:
                 cost = (price * quantity) * 0.95;
+                break;
             case 3:
                 cost = (price * quantity) * 0.90;
+                break;
             case 4:
                 cost = (price * quantity) * 0.85;
+                break;
             case 5:
-                cost(price * quantity) * 0.75;
+                cost = (price * quantity) * 0.78;
+                break;
 
         }
         return cost;
     }
-
 }

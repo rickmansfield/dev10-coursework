@@ -20,7 +20,25 @@ public class Exercise05 {
      * @param value the number to test
      * @return true if value is within 5 of a number evenly divisible by 100, false if not.
      */
-    public boolean isWithinFiveOfAHundred(int value) {
+    public static boolean isWithinFiveOfAHundred(int value) {
+        int low = value - 5;
+        for (int i = 0; i < 10; i++) {
+            if (low % 100 == 0) {
+                return true;
+            }
+            low++;
+        }
+
         return false;
     }
 }
+
+// Adam's Alternatives
+//if the number is 5 lower or 5 higher than input ex 99 and that range contains number/100 = whole number then true
+//int[] range = {(value -5), (value -4),(value -3),(value -2),(value -1),value,(value -1),(value +2),(value +3),(value +4),(value +5)};
+//for(int i =0; i <range.length; i++){
+//        int divisableBy100 = (range[i] % 100);
+//        if(divisableBy100 == 0) {
+//        return true;
+//        }
+//        }

@@ -8,22 +8,6 @@ public class App {
         System.out.printf("%-2s: %s, %s%n",captain.getNumber(),captain.getLastName(),captain.getPosition());
         System.out.printf("%-2s: %s, %s%n",goalKeeper.getNumber(),goalKeeper.getLastName(),goalKeeper.getPosition());
 
-        //add
-        //To add one element at a time, use the .add method. It appends elements at the end of the list.
-        ArrayList<SoccerPlayer> goalKeepers = new ArrayList<>();
-        goalKeepers.add(new SoccerPlayer(1, "Alyssa", "Naeher", "GK"));
-        goalKeepers.add(new SoccerPlayer(18, "Ashlyn", "Harris", "GK"));
-        goalKeepers.add(new SoccerPlayer(21, "Adrianna", "Franch", "GK"));
-
-        ArrayList<Integer> evenNumbers = new ArrayList<>();
-        // Primitive types can be used, but they're automatically "boxed"
-        // into their wrapper type.
-        evenNumbers.add(2);
-        evenNumbers.add(4);
-        evenNumbers.add(6);
-
-
-
 //                /* The `E` is replaced by a type.
 //        ArrayList<E> identifier = new ArrayList<E>(); */
 //        ArrayList<String> names = new ArrayList<String>();
@@ -44,10 +28,10 @@ public class App {
 
 
         GenericType<String> first = new GenericType<String>();
-        first.value = "one's value is a String";
+        first.value = "first's value is a String";
 
         GenericType<NationalForest> second = new GenericType<NationalForest>();
-        // two's value is a NationalForest
+        // seconds's value is a NationalForest
         second.value = new NationalForest("Angelina", "Florida", 21);
 
         GenericType<int[]> third = new GenericType<int[]>();
@@ -55,7 +39,26 @@ public class App {
         // Here, value is an int[].
         third.value = new int[] { 1, 3, 5, 7, 9 };
 
+        // create an ArrayList with a default capacity
+        ArrayList<SoccerPlayer> abc = new ArrayList<SoccerPlayer>();
+        // create an ArrayList with an explicit capacity
+        ArrayList<SoccerPlayer> xyz = new ArrayList<SoccerPlayer>(23);
+        // create an ArrayList based on another collection
+        //ArrayList<SoccerPlayer> qrs = new ArrayList<SoccerPlayer>(qrs);
 
+        //add
+        //To add one element at a time, use the .add method. It appends elements at the end of the list.
+        ArrayList<SoccerPlayer> goalKeepers = new ArrayList<>();
+        goalKeepers.add(new SoccerPlayer(1, "Alyssa", "Naeher", "GK"));
+        goalKeepers.add(new SoccerPlayer(18, "Ashlyn", "Harris", "GK"));
+        goalKeepers.add(new SoccerPlayer(21, "Adrianna", "Franch", "GK"));
+
+        ArrayList<Integer> evenNumbers = new ArrayList<>();
+        // Primitive types can be used, but they're automatically "boxed"
+        // into their wrapper type.
+        evenNumbers.add(2);
+        evenNumbers.add(4);
+        evenNumbers.add(6);
 
     }
 

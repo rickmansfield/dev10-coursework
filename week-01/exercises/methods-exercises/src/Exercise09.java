@@ -12,6 +12,18 @@ public class Exercise09 {
     // The second parameter is the number of columns.
     // See repetition Exercise15.
 
+    static void printBox(int columns, int rows){
+        for (int i = 0; i < rows; i++) {
+            System.out.print("#");
+            for (int j = 0; j < columns -1; j++) {
+                System.out.print("#");
+
+            }
+
+            System.out.println();
+        }
+    }
+
     // Expected Output (5 rows, 5 columns)
     // #####
     // #####

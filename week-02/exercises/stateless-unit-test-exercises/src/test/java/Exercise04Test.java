@@ -13,5 +13,9 @@ class Exercise04Test {
         // As long as the expected and actual differ by less than the delta, the test passes.
         assertEquals(1.25, instance.calculateTotalCost(0.25, 5), 0.001);
         assertEquals(99.06, instance.calculateTotalCost(1.27, 100), 0.001);
+        assertEquals(1.25, instance.calculateTotalCost(0.25, 5), 0.001);
+//        assertEquals(1.25, instance.calculateTotalCost(0.25, 5), 0.001);
+//        assertEquals(1.25, instance.calculateTotalCost(0.25, 5), 0.001);
+//        assertEquals(1.25, instance.calculateTotalCost(0.25, 5), 0.001);
     }
 }

@@ -9,5 +9,17 @@ public class Exercise07 {
 
     public static void main(String[] args) {
         // 2. Call your method in various ways to test it here.
+        System.out.println(areInOrder(1, 2, 3, 4));//true
+        System.out.println(areInOrder(2, 4, 6, 8));//true
+        System.out.println(areInOrder(5, 2, 3, 4));//false
+        System.out.println(areInOrder(1, 7, 3, 4));//false
+    }
+    public static boolean areInOrder (int a, int b, int c, int d){
+        if (a < b && b < c && c < d){
+            return true;
+        } else {
+            return false;
+        }
+
     }
 }

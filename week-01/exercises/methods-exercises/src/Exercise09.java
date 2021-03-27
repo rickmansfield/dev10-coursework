@@ -2,6 +2,8 @@ public class Exercise09 {
 
     public static void main(String[] args) {
         // 2. Call your method in various ways to test it here.
+        printBox(5, 5);
+        printBox(3, 4);
     }
 
     // 1. Create a method.
@@ -12,7 +14,7 @@ public class Exercise09 {
     // The second parameter is the number of columns.
     // See repetition Exercise15.
 
-    static void printBox(int columns, int rows){
+    public static void printBox(int columns, int rows){
         for (int i = 0; i < rows; i++) {
             System.out.print("#");
             for (int j = 0; j < columns -1; j++) {

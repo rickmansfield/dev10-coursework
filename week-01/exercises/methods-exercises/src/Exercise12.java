@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Exercise12 {
 
     // 1. Create a method.
@@ -24,4 +26,21 @@ public class Exercise12 {
         // printNounPhrase();
         // printNounPhrase();
     }
+
+    public static String readRequiredString(String prompt) {
+        Scanner console = new Scanner(System.in);
+        String result;
+        do {
+            System.out.println(prompt);
+            result = console.nextLine();
+        }
+        while (result.length() == 0 || result.equals(" "));
+        return result;
+
+    }
+
+    public static void printNounPhrases(){
+        System.out.println(readRequiredString(promptTwo));
+    }
+
 }

@@ -32,7 +32,6 @@ public class Exercise11 {
     }
 
     public static int readInt(String promptTwo){
-        int valueTwo = Integer.parseInt(readString(promptTwo));
-        return valueTwo;
+        return Integer.parseInt(readString(promptTwo));
     }
 }

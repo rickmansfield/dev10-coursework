@@ -12,7 +12,10 @@ public class Exercise02 {
 
         ArrayList<BoardGame> games = GameRepository.getAll();
 
-        public String getAllBoardGames(return)
+        public static ArrayList<BoardGame> printAllGames(GameRepository){
+
+
+        }
 
         }
 

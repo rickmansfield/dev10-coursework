@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class SoccerPlayer {
 
 
@@ -29,4 +31,41 @@ public class SoccerPlayer {
         return position;
     }
 
+    @Override
+    public boolean equals(Object value) {
+        // 1. check reference equality
+        if (this == value) {
+            return true;
+        }
+        // 2. Are they the same type?
+        if (value == null || getClass() != value.getClass()) {
+            return false;
+        }
+
+        // The types are the same. It's safe to cast value as a SoccerPlayer.
+        SoccerPlayer other = (SoccerPlayer) value;
+        // 3. check jersey number
+        if (number != other.number) {
+            return false;
+        }
+        // 4. check first name
+        // Objects.equals is a utility method that checks equality, including null checks.
+        // It makes our code a little clearer.
+        if (!Objects.equals(firstName, other.firstName)) {
+            return false;
+        }
+
+        // 5. check last name
+        if (!Objects.equals(lastName, other.lastName)) {
+            return false;
+        }
+
+        // 6. check position
+        if (!Objects.equals(position, other.position)) {
+            return false;
+        }
+
+        // 7. We made it! These objects are equal.
+        return true;
+    }
 }

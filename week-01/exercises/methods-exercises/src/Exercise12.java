@@ -22,9 +22,9 @@ public class Exercise12 {
 
     public static void main(String[] args) {
         // 3. Uncomment the code below and confirm it works.
-        // printNounPhrase();
-        // printNounPhrase();
-        // printNounPhrase();
+         printNounPhrase();
+         printNounPhrase();
+         printNounPhrase();
     }
 
     public static String readRequiredString(String prompt) {
@@ -39,8 +39,10 @@ public class Exercise12 {
 
     }
 
-    public static void printNounPhrases(){
-        System.out.println(readRequiredString(promptTwo));
+    public static void printNounPhrase(){
+        String noun = readRequiredString("Enter a noun: ");
+        String adjective = readRequiredString("Enter an adjective: ");
+       System.out.println("If you answered correctly " + adjective + " is an adjective that describes the noun " + noun + ".");
     }
 
 }

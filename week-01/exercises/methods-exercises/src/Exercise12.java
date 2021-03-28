@@ -8,7 +8,6 @@ public class Exercise12 {
     // Output: String
     // Description: prompts a user to enter a required string and returns their validated input.
     // The parameter is the message displayed to the user.
-    //
     // See the readRequiredString implementation in the methods lesson.
     // You can definitely improve it. Make sure you don't allow blank input. Checking the length() is not enough.
 
@@ -26,7 +25,7 @@ public class Exercise12 {
          printNounPhrase();
          printNounPhrase();
     }
-
+//Best held in a class rather than an instance of the class
     public static String readRequiredString(String prompt) {
         Scanner console = new Scanner(System.in);
         String result;
@@ -38,11 +37,10 @@ public class Exercise12 {
         return result;
 
     }
-
+//might be good for an "instance" of a class
     public static void printNounPhrase(){
         String noun = readRequiredString("Enter a noun: ");
         String adjective = readRequiredString("Enter an adjective: ");
        System.out.println("If you answered correctly " + adjective + " is an adjective that describes the noun " + noun + ".");
     }
-
 }

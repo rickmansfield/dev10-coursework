@@ -25,5 +25,13 @@ public class Exercise19 {
         // "", "huh?" -> "huh?"
         // "wha?", "" -> "wha?"
 
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < first.length(); i++ ) {
+                sb.append(first.charAt(i));
+                sb.append(second.charAt(i));
+        }
+        String interLeaved = sb.toString();
+        System.out.println(interLeaved);
+
     }
 }

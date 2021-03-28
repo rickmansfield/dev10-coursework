@@ -10,6 +10,6 @@ public class Exercise06 {
         }
 
         // 2. Print the result.
-        System.out.println("Sum: " + sum);
+        System.out.println("Sum: " + sum); //229
     }
 }

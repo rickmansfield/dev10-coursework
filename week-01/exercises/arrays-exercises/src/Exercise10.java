@@ -10,6 +10,8 @@ public class Exercise10 {
         // 1. Count the number of beetles and mosquitoes.
         // 2. Print the result.
         // Results will vary because of randomness.
+
+
     }
 
     public static String[] makeBugArray() {

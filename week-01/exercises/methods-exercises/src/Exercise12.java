@@ -33,7 +33,7 @@ public class Exercise12 {
             System.out.println(prompt);
             result = console.nextLine();
         }
-        while (result.length() == 0 || result.equals(" "));
+        while (result.length() == 0 || result.equals(" ") || result.isBlank());
         return result;
 
     }

@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Exercise15 {
     /* FIZZ BUZZ
 
@@ -32,4 +34,42 @@ public class Exercise15 {
     17
     Fizz
      */
+
+    public static void main(String[] args) {
+        int userWholeNumber = 0;
+
+        userWholeNumber = readInt("Enter a whole number: ");
+        fizzBuzz(userWholeNumber);
+
+
+    }
+
+    public static int readInt(String numberPrompt){
+        return Integer.parseInt(readString(numberPrompt));
+    }
+
+    public static String readString(String prompt) {
+        Scanner console = new Scanner(System.in);
+        System.out.print(prompt);
+        return console.nextLine();
+    }
+
+
+    public static void fizzBuzz(int anyWholeNumber){
+        for (int i = 1; i <= anyWholeNumber; i++){
+            if (i%3==0 && i%5==0) {
+            System.out.println(i + " FizzBuzz(by both)");
+            }
+            else if (i % 3 == 0) {
+                System.out.println(i + " Fizz(by3)");
+            }
+            else if (i % 5 == 0){
+                System.out.println(i + " Buzz(by5)");
+            }
+            else {
+                System.out.println(i);
+            }
+//            System.out.print(","+" ");
+        }
+    }
 }

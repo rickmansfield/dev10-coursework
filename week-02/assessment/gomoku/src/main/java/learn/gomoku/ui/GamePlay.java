@@ -79,6 +79,8 @@ public class GamePlay {
             stonesArrays[stone.getRow()][stone.getColumn()] = stone;
             drawBoard(stonesArrays);
         }
+        Player winner = gomoku.getWinner();
+        System.out.printf("%s Wins!", winner.getName());
     }
 
     private Stone getPlayerMove(Gomoku gomoku, Player currentPlayer) {
@@ -100,7 +102,7 @@ public class GamePlay {
             //current player is random
             else {
                 //stone = gomoku.getCurrent().generateMove(gomoku.getStones());
-                System.out.printf("Stone placed at row %s, column %s", stone.getRow() + 1, stone.getColumn() + 1);
+                System.out.printf("Stone placed at row %s, column %s %n", stone.getRow() + 1, stone.getColumn() + 1);
             }
             result = gomoku.place(stone);
             // validate result
@@ -114,8 +116,34 @@ public class GamePlay {
     }
 
 
-    private void drawBoard(Stone[][] stonesArrays) {
+    private void drawBoard(Stone[][] stones) {
         System.out.println("Drawing board");
+        int rows = Gomoku.WIDTH;
+        int columns = Gomoku.WIDTH;
+
+        // draw top row
+        System.out.println("  ");
+        for (int col = 0; col < columns; col++) {
+            System.out.printf(" %02d ", col +1);
+        }
+        System.out.println();
+        //printing rows
+        for(int row = 0; row < rows; row++) {
+            //printing rows numbering
+            System.out.printf(" %2d", row +1);
+            //printing all the columns
+            for(int col =0; col<columns; col ++){
+                if(stones[row][col] != null){
+                    System.out.printf(" %s", stones[row][col].isBlack() ? "B " : "W ");
+                } else {
+                    System.out.print("  - ");
+                }
+            }
+            System.out.println();
+        }
+        System.out.println();
+
     }
+
 
 }

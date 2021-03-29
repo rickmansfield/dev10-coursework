@@ -12,7 +12,7 @@ public class Exercise11 {
         // 3. Loop through `values` a second time. Add positive elements to the new array.
         // 4. Confirm the positive array is properly populated either by debugging or printing its elements.
 
-        int valuesTwo = countelements(makeRandomArray());
+        int valuesTwo = countElements(makeRandomArray());
 
         for (int i = 0; i < values.length; i++){
             Random random = new Random();
@@ -31,11 +31,16 @@ public class Exercise11 {
         return result;
     }
 
-    public static int countelements(int[] randomArray){
+    public static int countElements(int[] randomArray){
         int sumPosElements = 0;
         for (int i = 0; i < randomArray.length; i++){
             if (randomArray[i] > 0)
                 sumPosElements += randomArray[i];
+            //Enhanced for loop alternative
+//            for (int j : randomArray) {
+//                if (j > 0)
+//                    sumPosElements += j;
+//            }
         }
         System.out.println(sumPosElements);
         return sumPosElements;

@@ -48,4 +48,8 @@ public class Exercise13 {
         }
         return result;
     }
+
+    public static int countStates(String[] randomStringArray){
+
+    }
 }
